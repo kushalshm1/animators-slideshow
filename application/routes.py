@@ -11,7 +11,12 @@ from flask_login import login_user, current_user, logout_user, login_required
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('home.html', posts=posts)
+    images = [url_for('static',filename=f'slide_images/{i}') for i in os.listdir('application/static/slide_images')]
+    return render_template('home.html', images = images)
+
+@app.route('/set-timer')
+def timer():
+    return render_template('timer.html')
 
 
 @app.route("/register", methods=['GET', 'POST'])
