@@ -3,4 +3,5 @@ flask-bcrypt
 flask-login
 flask-sqlalchemy
 flask-wtf
+email-validator
 Pillow

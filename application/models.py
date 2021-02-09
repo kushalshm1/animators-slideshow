@@ -1,5 +1,5 @@
 from datetime import datetime
-from applicaton import db, login_manager
+from application import db, login_manager
 from flask_login import UserMixin
 
 
